@@ -1,0 +1,8 @@
+mg(openbsd version) for basic editing
+mksh for shell
+
+My mkshrc is included here with enabled history, and some minor vars. Everything else is stock from MirBSD.
+TERM is vt220 for compatibility and portability, no syntax coloring or any colors in terminal.
+
+INSTALLATION:
+Run install.sh as root, it should work on any sane unix system.
