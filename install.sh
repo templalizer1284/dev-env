@@ -1,8 +1,9 @@
 #!/bin/sh
 
 # Unpacking good stuff
-tar xvf mg.tar
-tar xvf mksh-R59c.tar
+pax -rvf mg.tar
+pax -rvf mksh-R59c.tar
+pax -j -rvf tmux-3.5a
 
 # Compiling
 cd mg
@@ -16,6 +17,12 @@ cd mksh
 chmod +x Build.sh
 sh ./Build.sh
 cp mksh /usr/local/bin
+
+cd ..
+
+cd tmux-3.5a
+./configure --prefix=/usr/local --disable-utf8proc
+make install
 
 cd ..
 
